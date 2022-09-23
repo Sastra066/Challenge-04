@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="author" content="Sabrina" />
+    <meta name="description" content="Lorem ipsum dolor sit amet" />
+    <meta
+      name="viewport"
+      content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width"
+    />
+    <title>Binar: Challenge 04</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Example CSS -->
+    <link href="./css/style.example.css" rel="stylesheet" />
+
+    <!-- flatpickr -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  </head>
+  <body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+      <div class="container">
+        <img src="./images/logo.png" alt="">
+        <!-- <a class="navbar-brand" href="#"></a> -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav justify-content-end">
+            <li class="nav-item me-2">
+              <a class="nav-link active" aria-current="page" href="#Our-Services">Our Services</a>
+            </li>
+            <li class="nav-item me-2">
+              <a class="nav-link" href="#Why-Us">Why Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#testimonial">Testimonial</a>
+            </li>
+            <li class="nav-item me-2">
+              <a class="nav-link" href="#FAQ">FAQ</a>
+            </li>
+            <li class="nav-item">
+              <button type="button" class="btn btn-primary btn-sm">Register</button>
+            </li>
+          </ul>
+        </div>
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+          <div class="offcanvas-header">
+            <h3 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">BCR</h3>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="navbar-nav">
+              <li class="nav-item me-2">
+                <a class="nav-link active" aria-current="page" href="#Our-Services">Our Services</a>
+              </li>
+              <li class="nav-item me-2">
+                <a class="nav-link" href="#Why-Us">Why Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#testimonial">Testimonial</a>
+              </li>
+              <li class="nav-item me-2">
+                <a class="nav-link" href="#FAQ">FAQ</a>
+              </li>
+              <li class="nav-item">
+                <button type="button" class="btn btn-primary btn-sm">Register</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+    
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvas" aria-labelledby="offcanvasLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasLabel">Offcanvas</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        Content for the offcanvas goes here. You can place just about any Bootstrap component or custom elements here.
+      </div>
+    </div>
+
+    <section class="main-section"><br><br><br>
+      <div class="row">
+        <div class="col-lg-6 main">
+          <h2>Sewa & Rental Mobil Terbaik di kawasan (Lokasimu)</h2>
+          <p>Selamat datang di Binar Car Rental. Kami menyediakan mobil kualitas terbaik dengan harga terjangkau. Selalu siap melayani kebutuhanmu untuk sewa mobil selama 24 jam.</p>
+          <!-- <button class="button-28" role="button">Mulai Sewa Mobil</button> -->
+        </div>
+        <div class="col-lg-6 car">
+          <img class="bg" src="./images/bg.png" alt="">
+          <img class="img-car" src="./images/carss.png" alt="">
+        </div>
+      </div>
+    </section>
+
+    <section class="Cari-Mobil container">
+      <div class="form">
+        <div class="inp-wrapper">
+          <div class="bagianSatu">
+            <div class="tipe-driver">
+              <label for="">Tipe Driver</label>
+              <div class="custom-select">
+                <select>
+                  <option value="null">Pilih Tipe Mobil</option>
+                  <option value="1">Dengan Sopir</option>
+                  <option value="0">Tanpa Sopir (Lepas Kunci)</option>
+                </select>
+              </div>
+            </div>
+            <div>
+              <label for="date">Tanggal</label>
+              <div class="date">
+                <input type="datetime" placeholder="Pilih Tanggal" id="date" onclick="input()">
+              </div>
+            </div>
+          </div>
+          
+          <div>
+            <label for="time">Waktu</label>
+            <div class="time">
+              <input type="time" id="time" onclick="input()">
+            </div>
+          </div>
+          <div>
+            <label for="jlhPenumpang">Jumlah Penumpang (Optional)</label>
+            <div class="jlhPenumpang" >
+              <input type="number" class="jlhPenumpang" placeholder="Jumlah penumpang" id="jlhPenumpang" onclick="input()">
+            </div>
+          </div>
+          <div>
+            <button class="cariMobil" id="load-btn">Cari Mobil</button>
+            <button class="cariMobil" id="clear-btn">Reset</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div id="belakang" onclick="inputDone()"></div>
+
+    <p id="demo"></p>
+
+    <div id="cars-container" class="container">
+      
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-3 col-md-6 col-12">
+                <p>Jalan Suroyo No. 161 Mayangan Kota Probolonggo 672000</p>
+                <p>binarcarrental@gmail.com</p>
+                <p>081-233-334-808</p>
+              </div>
+              <div class="col-lg-2 col-md-6 col-12">
+                <a href="#Our-Services">Our services</a><br>
+                <a href="#Why-Us">Why Us</a><br>
+                <a href="#testimonial">Testimonial</a><br>
+                <a href="#FAQ">FAQ</a><br>
+              </div>
+              <div class="col-lg-4 col-md-6 col-sm-12">
+                <p>Connect with us</p>
+                <img src="./images/icon_facebook.png" alt="">
+                <img src="./images/icon_instagram.png" alt="">
+                <img src="./images/icon_twitter.png" alt="">
+                <img src="./images/icon_mail.png" alt="">
+                <img src="./images/icon_twitch.png" alt="">
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-12">
+                <p>Copyright Binar 2022</p>
+                <img src="./images/logo.png" alt="">
+              </div>
+          </div>
+      </div>
+    </footer>
+    <!-- Example Javascript -->
+    <script type="text/javascript" src="./scripts/binar.js"></script>
+    <script type="text/javascript" src="./scripts/app.js"></script>
+    <script type="text/javascript" src="./scripts/car.js"></script>
+    <script type="text/javascript" src="./scripts/main.example.js"></script>
+    <script type="text/javascript" src="./scripts/main.js"></script>
+
+    <!-- flatpickr -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+
+    <script>
+      config = {
+
+        dateFormat: "Y-m-d",
+      }
+      flatpickr("input[type=datetime]", config);
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
