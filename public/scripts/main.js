@@ -87,6 +87,8 @@ function input() {
     let parentElement = document.body;
     let element = document.getElementById("belakang");
     element.classList.add("belakang");
+    let form =document.getElementById("form");
+    form.classList.add("zindex");
 }
 
 
@@ -94,6 +96,8 @@ function input() {
 function inputDone(){
     var done = document.getElementById("belakang");
     done.classList.remove("belakang");
+    let form =document.getElementById("form");
+    form.classList.remove("zindex");
 }
 
 /* If the user clicks anywhere outside the select box,
@@ -101,6 +105,10 @@ then close all select boxes: */
 document.addEventListener("click", closeAllSelect);
 
 function cariMobil() {
-    window.location = "http://localhost:8000/cars";
+  window.location = "http://localhost:8000/cars";
+}
+
+function toHomePage(link){
+  window.location = "http://localhost:8000/" + link;
 }
 

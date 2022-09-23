@@ -32,5 +32,5 @@ function onRequest(req, res) {
 const server = http.createServer(onRequest);
 
 server.listen(port, 'localhost', () => {
-    console.log("Server Sudah Berjalan");
+    console.log("Server Sudah Berjalan di http://localhost:%d", port);
 });
