@@ -28,24 +28,14 @@ class App {
     let timeInput = document.getElementById("time").value;
     let dateInput = date + "T" +time;
     let formDate = Date.parse(dateInput);
+
     Car.list.forEach((car) => {
       let dateRenting = Date.parse(car.availableAt);
       let dateTime = car.availableAt;
-      console.log(dateTime)
-      let time = dateTime.toLocaleTimeString();
-
+      let time = dateTime.toLocaleTimeString('en-US', { hour12: false });
       let tempdate = JSON.stringify(car.availableAt);
-      console.log(tempdate)
       let tempdate2 = tempdate.split("T");
       let tempdate3 = tempdate2[0].replace('"', "");
-      console.log(timeInput);
-      console.log(date);
-      console.log(time);
-      console.log(tempdate3);
-
-      if(timeInput>time){
-        console.log(timeInput);
-      }
 
       if (
         Penumpang <= car.capacity &&
@@ -57,13 +47,11 @@ class App {
           const node = document.createElement("div");
           node.innerHTML = car.render();
           this.carContainerElement.appendChild(node);
-          console.log("sa")
         }
         if (tipeDriver == car.available) {
           const node = document.createElement("div");
           node.innerHTML = car.render();
           this.carContainerElement.appendChild(node);
-          console.log("ds")
         }
       } else if (tipeDriver == "null" && Penumpang <= car.capacity) {
         if (
@@ -73,7 +61,6 @@ class App {
           const node = document.createElement("div");
           node.innerHTML = car.render();
           this.carContainerElement.appendChild(node);
-          console.log("sd")
         }
       }
     });

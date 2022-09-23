@@ -49,7 +49,7 @@ class Car {
         <p>${this.description}</p>
         <p><img src="./images/fi_users.png">${this.capacity} orang</p>
         <p><img src="./images/fi_settings.png" alt="">${this.transmission}</p>
-        <p><img src="./images/fi_calendar.png" alt="">Tahun ${this.availableAt}</p>
+        <p><img src="./images/fi_calendar.png" alt="">Tahun ${this.year}</p>
       </div>
       <button class="pilihMobil">Pilih Mobil</button>
     </div>
